@@ -1,0 +1,189 @@
+/*BASIC RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, Arial;
+}
+body{
+    background: #f4f4f4;
+    color: #333;
+}
+
+/*HEADER*/
+header{
+    background: #000;
+    color: white;
+    padding: 15px 40px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a{
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover{
+    color: #00e5ff;
+}
+
+/*HOME SECTION*/
+.home{
+  height: 90vh;
+  background: linear-gradient(to right, #2196F3, #00BCD4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  animation: fade1n 1.5s ease;   
+}
+
+.home-content span{
+    color:yellow;
+}
+
+.btn{
+    background: black;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+.btn:hover{
+    background: #222;
+    transform:scale(1.05);
+}
+
+/*SECTION STYLES*/
+section{
+    padding: 720px 0px;
+    text-align: center;
+}
+
+/*SKILLS*/
+.skill-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill{
+    background: #00bcd4;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.skill:hover{
+    transform: translate Y(-5px);
+    background: #0097a7;
+}
+
+/*PROJECT CARDS*/
+.project-card{
+    background: white;
+    padding:20px;
+    margin: 20px auto;
+    width: 65%;
+    border-radius: 10px;
+    box-shadow: 00 12px#bbb;
+    transition: 0.3s ease;
+}
+
+.project-card:hover{
+    transform: scale(1.03);
+    box-shadow: 0015px #999;
+}
+
+/*CONTACT FORM*/
+form input, form textarea{
+    width: 60%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+text area{
+    height: 120px;
+}
+
+/*FOOTER*/
+footer{
+    background: #000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/*ANIMATED: REVEAL EFFECT*/
+.reveal{
+    opacity: 0;
+    transform: translate Y(40px);
+    animation: revealAnim 1s ease forwards;
+}
+
+@keyframes revealAnim{
+    to{
+        opacity: 1;
+        transform: translate Y(0);
+    }
+}
+
+/*FADE-IN EFFECT*/
+@keyframes fadeln{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*RESPONSIVE DESIGN*/
+@media (max-width:768px){
+    nav{
+        display: none;
+        flex-direction: column;
+        background: #111;
+        width:100%;
+        padding:20px;
+    }
+    
+    nav.open{
+        display:flex;
+    }
+
+    .menu-btn{
+        display: block;
+        color: white;
+    }
+
+    .project-card{
+        width: 90%;
+    }
+
+    form input, form textarea{
+        width: 90%;
+    }
+
+}
